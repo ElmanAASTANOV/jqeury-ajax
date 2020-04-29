@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.min.js"></script>
+</head>
+
+<body>
+
+    <div class="result">
+
+    </div>
+
+</body>
+<script>
+    // https://jsonplaceholder.typicode.com/users
+    $.get("https://jsonplaceholder.typicode.com/user", {
+        name: "elman",surname: "astanov"
+    })
+        .done(function (data) {
+            console.log("success:", data);
+        })
+        .fail(function (jqXHR, textStatus, error) {
+            console.log(jqXHR.status, textStatus, error);
+            console.log("error:", error);
+        })
+        .always(function () {
+            console.log("finished");
+        });
+</script>
+
+</html>
