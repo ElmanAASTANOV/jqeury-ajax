@@ -15,21 +15,5 @@
     </div>
 
 </body>
-<script>
-    // https://jsonplaceholder.typicode.com/users
-    $.get("https://jsonplaceholder.typicode.com/user", {
-        name: "elman",surname: "astanov"
-    })
-        .done(function (data) {
-            console.log("success:", data);
-        })
-        .fail(function (jqXHR, textStatus, error) {
-            console.log(jqXHR.status, textStatus, error);
-            console.log("error:", error);
-        })
-        .always(function () {
-            console.log("finished");
-        });
-</script>
 
 </html>
