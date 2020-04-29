@@ -14,6 +14,25 @@
 
     </div>
 
+    <script>
+        $.post("https://jsonplaceholder.typicode.com/posts", {
+            userId: 101,
+            id: 100,
+            title: "suscipit",
+            body: "nsuscipit"
+        })
+        .done(function(data) {
+            console.log("success:", data);
+        })
+        .fail(function(jqXHR, textStatus, error) {
+            console.log("error:", error);
+        })
+        .always(function() {
+            console.log("finished");
+        });
+    </script>
+
 </body>
+
 
 </html>
